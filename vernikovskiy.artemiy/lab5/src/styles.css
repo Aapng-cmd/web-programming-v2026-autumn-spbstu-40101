@@ -61,7 +61,7 @@ body {
   min-width: 0;
   background-color: white;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgb(0 0 0);
   overflow: hidden;
   padding: 20px;
 }
@@ -84,12 +84,12 @@ body {
   font-weight: bold;
   text-align: center;
   padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgb(0 0 0);
   flex-shrink: 0;
 }
 
 .cover-text {
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 3px rgb(0 0 0);
   word-wrap: break-word;
 }
 

@@ -112,6 +112,7 @@ function App() {
 
         <button
           className="slider-button next"
+          data-testid="slide-indicator"
           onClick={goToNext}
           aria-label="Следующий слайд"
         >
