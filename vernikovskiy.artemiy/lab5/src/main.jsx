@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles.css';
 
@@ -8,60 +8,62 @@ const books = [
     title: 'Гарри Поттер и философский камень',
     author: 'Дж. К. Роулинг',
     rating: 4.8,
-    description: 'Первый роман в серии о юном волшебнике, который узнаёт о своём даре и поступает в школу магии Хогвартс.',
+    description:
+      'Первый роман в серии о юном волшебнике, который узнаёт о своём даре и поступает в школу магии Хогвартс.',
     price: 499,
     coverColor: '#8B0000',
-    coverText: 'Гарри Поттер'
+    coverText: 'Гарри Поттер',
   },
   {
     id: 2,
     title: 'Властелин колец: Братство кольца',
     author: 'Дж. Р. Р. Толкин',
     rating: 4.9,
-    description: 'Хоббит Фродо отправляется в опасное путешествие, чтобы уничтожить Кольцо Всевластья и спасти Средиземье.',
+    description:
+      'Хоббит Фродо отправляется в опасное путешествие, чтобы уничтожить Кольцо Всевластья и спасти Средиземье.',
     price: 599,
     coverColor: '#2E4A62',
-    coverText: 'Властелин колец'
+    coverText: 'Властелин колец',
   },
   {
     id: 3,
     title: '1984',
     author: 'Джордж Оруэлл',
     rating: 4.7,
-    description: 'Антиутопия о тоталитарном обществе, где власть контролирует мысли и историю, а главный герой начинает сомневаться в системе.',
+    description:
+      'Антиутопия о тоталитарном обществе, где власть контролирует мысли и историю, а главный герой начинает сомневаться в системе.',
     price: 349,
     coverColor: '#4A4A4A',
-    coverText: '1984'
+    coverText: '1984',
   },
   {
     id: 4,
     title: 'Мастер и Маргарита',
     author: 'Михаил Булгаков',
     rating: 4.9,
-    description: 'Роман о визите дьявола в Москву 1930-х годов, переплетающий мистику, философию и историю Понтия Пилата.',
+    description:
+      'Роман о визите дьявола в Москву 1930-х годов, переплетающий мистику, философию и историю Понтия Пилата.',
     price: 450,
     coverColor: '#5D3A1A',
-    coverText: 'Мастер и Маргарита'
+    coverText: 'Мастер и Маргарита',
   },
   {
     id: 5,
     title: 'Маленький принц',
     author: 'Антуан де Сент-Экзюпери',
     rating: 4.6,
-    description: 'Философская сказка о маленьком принце, который путешествует по планетам и учит главным жизненным истинам.',
+    description:
+      'Философская сказка о маленьком принце, который путешествует по планетам и учит главным жизненным истинам.',
     price: 299,
     coverColor: '#2E8B57',
-    coverText: 'Маленький принц'
-  }
+    coverText: 'Маленький принц',
+  },
 ];
 
-function BookCard({ book }) {
+function BookCard({book}) {
   return (
     <div className="book-card">
-      <div
-        className="book-cover"
-        style={{ backgroundColor: book.coverColor }}
-      >
+      <div className="book-cover" style={{backgroundColor: book.coverColor}}>
         <span className="cover-text">{book.coverText}</span>
       </div>
       <div className="book-info">
@@ -96,7 +98,9 @@ function App() {
 
   return (
     <main data-testid="app" className="app">
-      <h1 className="slider-title" data-testid="slide-page">Популярные книги</h1>
+      <h1 className="slider-title" data-testid="slide-page">
+        Популярные книги
+      </h1>
       <div className="slider-container" data-testid="slide-page">
         <button
           className="slider-button prev"
@@ -143,5 +147,5 @@ function App() {
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
