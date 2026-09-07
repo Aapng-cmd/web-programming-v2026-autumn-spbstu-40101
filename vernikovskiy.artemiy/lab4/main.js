@@ -40,7 +40,7 @@ function render() {
     info.innerHTML = `
       <p><strong>ID:</strong> ${student.id}</p>
       <p><strong>Имя:</strong> ${student.name}</p>
-      <p><strong>Средний балл:</strong> ${student.getAverageGrade()}</p>
+      <p><strong>Средний балл:</strong> ${Math.round(student.getAverageGrade() * 100) / 100}</p>
     `;
 
     const subjectsDiv = document.createElement('div');
