@@ -122,7 +122,7 @@ function App() {
       </div>
 
       <div className="slider-footer">
-        <div className="slide-counter">
+        <div className="slide-counter" data-testid="slide-indicator">
           {currentSlide + 1}/{totalSlides}
         </div>
         <div className="pagination" data-testid="book-slide">
