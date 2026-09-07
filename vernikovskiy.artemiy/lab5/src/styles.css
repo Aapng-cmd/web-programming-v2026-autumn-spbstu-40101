@@ -90,7 +90,7 @@ body {
 
 .cover-text {
   text-shadow: 1px 1px 3px rgb(0 0 0);
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .book-info {

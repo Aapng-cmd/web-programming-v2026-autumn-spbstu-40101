@@ -100,6 +100,7 @@ function App() {
       <div className="slider-container">
         <button
           className="slider-button prev"
+          data-testid="slide-previous"
           onClick={goToPrev}
           aria-label="Предыдущий слайд"
         >
@@ -112,7 +113,7 @@ function App() {
 
         <button
           className="slider-button next"
-          data-testid="slide-indicator"
+          data-testid="slide-next"
           onClick={goToNext}
           aria-label="Следующий слайд"
         >
@@ -124,7 +125,7 @@ function App() {
         <div className="slide-counter">
           {currentSlide + 1}/{totalSlides}
         </div>
-        <div className="pagination">
+        <div className="pagination" data-testid="book-slide">
           {books.map((book, index) => (
             <button
               key={book.id}
