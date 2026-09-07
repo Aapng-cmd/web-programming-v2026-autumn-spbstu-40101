@@ -97,7 +97,7 @@ function App() {
   return (
     <main data-testid="app" className="app">
       <h1 className="slider-title">Популярные книги</h1>
-      <div className="slider-container">
+      <div className="slider-container" data-testid="slide-page">
         <button
           className="slider-button prev"
           data-testid="slide-previous"
