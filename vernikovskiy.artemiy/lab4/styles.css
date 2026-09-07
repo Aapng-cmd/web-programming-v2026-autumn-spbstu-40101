@@ -52,9 +52,11 @@ button:hover {
 }
 
 #student-list {
+/*
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+*/
 }
 
 .student-card {
