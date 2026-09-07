@@ -96,7 +96,7 @@ function App() {
 
   return (
     <main data-testid="app" className="app">
-      <h1 className="slider-title">Популярные книги</h1>
+      <h1 className="slider-title" data-testid="slide-page">Популярные книги</h1>
       <div className="slider-container" data-testid="slide-page">
         <button
           className="slider-button prev"
@@ -107,7 +107,7 @@ function App() {
           {'<'}
         </button>
 
-        <div className="slide-wrapper">
+        <div className="slide-wrapper" data-testid="slide-page">
           <BookCard book={books[currentSlide]} />
         </div>
 
