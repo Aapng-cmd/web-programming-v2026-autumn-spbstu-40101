@@ -26,7 +26,7 @@ function saveStudents(students) {
   );
 }
 
-let students = loadStudents();
+const students = loadStudents();
 const studentList = document.querySelector('[data-testid="entity-list"]');
 
 function render() {
@@ -124,7 +124,7 @@ async function deleteGrade(studentId, subject) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const student = students.find((s) => s.id === studentId);
-      if (!student || !student.grades.hasOwnProperty(subject)) {
+      if (!student || !Object.hasOwn(student.grades, subject)) {
         reject(new Error('Оценка не найдена'));
       } else {
         delete student.grades[subject];

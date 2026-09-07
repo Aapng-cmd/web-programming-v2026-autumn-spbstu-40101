@@ -64,5 +64,5 @@ export function getStudentsWithMaxAverageGrade(students) {
 }
 
 export function getStudentsBySubject(students, subject) {
-  return students.filter((s) => s.grades.hasOwnProperty(subject));
+  return students.filter((s) => Object.hasOwn(s.grades, subject));
 }
