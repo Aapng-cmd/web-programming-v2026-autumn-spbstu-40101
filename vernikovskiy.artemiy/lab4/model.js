@@ -18,7 +18,7 @@ export class Student {
   }
 
   get summary() {
-    return `Студент ${this.name} (id: ${this.id}) — средний балл: ${this.getAverageGrade().toFixed()}`;
+    return `Студент ${this.name} (id: ${this.id}) — средний балл: ${this.getAverageGrade()}`;
   }
 }
 
