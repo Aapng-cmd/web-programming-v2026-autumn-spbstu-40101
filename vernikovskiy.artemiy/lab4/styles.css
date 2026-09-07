@@ -51,13 +51,13 @@ button:hover {
   background-color: #0056b3;
 }
 
-#student-list {
 /*
+#student-list {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-*/
 }
+*/
 
 .student-card {
   background: #fff;
