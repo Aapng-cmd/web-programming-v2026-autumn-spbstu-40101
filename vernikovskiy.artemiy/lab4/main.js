@@ -4,7 +4,9 @@ const STORAGE_KEY = 'students';
 
 function loadStudents() {
   const data = localStorage.getItem(STORAGE_KEY);
-  if (!data) return [];
+  if (!data) {
+    return [];
+  }
   try {
     const parsed = JSON.parse(data);
     return parsed.map(
@@ -38,7 +40,7 @@ function render() {
     info.innerHTML = `
       <p><strong>ID:</strong> ${student.id}</p>
       <p><strong>Имя:</strong> ${student.name}</p>
-      <p><strong>Средний балл:</strong> ${student.getAverageGrade().toFixed(2)}</p>
+      <p><strong>Средний балл:</strong> ${student.getAverageGrade()}</p>
     `;
 
     const subjectsDiv = document.createElement('div');
@@ -139,7 +141,7 @@ document
   .addEventListener('submit', async (e) => {
     e.preventDefault();
     const form = e.target;
-    const id = parseInt(form.id.value);
+    const id = parseInt(form.id.value, 10);
     const name = form.name.value.trim();
     try {
       await addStudent(id, name);
@@ -152,9 +154,9 @@ document
 document.getElementById('grade-form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const form = e.target;
-  const studentId = parseInt(form.studentId.value);
+  const studentId = parseInt(form.studentId.value, 10);
   const subject = form.subject.value.trim();
-  const grade = parseInt(form.grade.value);
+  const grade = parseInt(form.grade.value, 10);
   try {
     await addGrade(studentId, subject, grade);
     form.reset();
